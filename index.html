@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Literally, Template Literals, Literally</title>
+  </head>
+  <body>
+    <h1 id="header"></h1>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script>
+    var field = 'computer science'
+    var text = 'In '+ field +', a literal is a notation for representing' +  
+    ' a fixed value in source code. Almost all programming languages have'+
+    ' notations for atomic values such as integers, floating-point numbers,'+ 
+    ' and strings, and usually for booleans and characters; some also have'+
+    ' notations for elements of enumerated types and compound values such as'+
+    'arrays, records, and objects. An anonymous function is a literal for the'+ 
+    'function type.'
+    document.getElementById('header').textContent = text
+  </script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script>
+    var field = 'basket weaving'
+    var text = `In ${field}, a literal is a notation for representing 
+ a fixed value in source code. Almost all programming languages have
+ notations for atomic values such as integers, floating-point numbers, 
+ and strings, and usually for booleans and characters; some also have
+ notations for elements of enumerated types and compound values such as
+ arrays, records, and objects. An anonymous function is a literal for the 
+ function type.'
+ `
+    document.getElementById('header').textContent = text
+  </script>-->
+  
+  <!--https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_template_literals-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script>
+  function leftPoop (i) {
+    return (strings, ...values) => String.raw(strings, ...values.map(v => Array(i+1).join('💩')+v))
+  }
+  var field = 'computer science'
+  var text = leftPoop(50)`In ${field}, a literal is a notation for 
+ representing a fixed value in source ${'code'}. Almost all programming languages 
+ have notations for atomic values such as integers, floating-point numbers, 
+ and strings, and usually for booleans and characters; some also have
+ notations for elements of enumerated types and compound values such as
+ arrays, records, and objects. An anonymous function is a literal for the 
+ function type.
+ `
+    document.getElementById('header').textContent = text
+  </script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<script>
+  var bel = require('bel')
+  var field = 'codfsfdmputer science'
+  var elem = bel`<p>In <i>${field}</i>, a literal is a notation for 
+ representing a fixed value in source code. Almost all programming languages 
+ have notations for atomic values such as integers, floating-point numbers, 
+ and strings, and usually for booleans and characters; some also have
+ notations for elements of enumerated types and compound values such as
+ arrays, records, and objects. An anonymous function is a literal for the 
+ function type.</p>
+ `
+    document.getElementById('header').appendChild(elem)
+  </script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--<script>
+  var funky = require('../funky')
+  var view = funky`<p>In <i>${x => x}</i>, a literal is a notation for 
+ representing a fixed value in source ${'code'}. Almost all programming
+ languages have notations for atomic values such as integers, floating-point 
+ numbers, and strings, and usually for booleans and characters; some also have
+ notations for elements of enumerated types and compound values such as
+ arrays, records, and objects. An anonymous function is a literal for the 
+ function type.</p>
+ `
+    var elem = view('computer science')
+    document.getElementById('header').appendChild(elem)
+  </script>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    var funky = require('../funky')
+    var defView = funky`<li>${x => x}</li>`
+    var mainView = funky`
+      <div>
+        <h3>Literal means:</h3>
+        <ol>
+          ${arr => arr.map(defView)}
+        </ol>
+      </div>
+    `
+    var definitions = 
+      ['in accordance with, involving, or being the primary or strict meaning of the word or words; not figurative or metaphorical',
+       'following the words of the original very closely and exactly',
+       'true to fact; not exaggerated; actual or factual'
+      ]
+    var elem = mainView(definitions)
+    document.getElementById('header').appendChild(elem)
+  </script>
+
+</html>
