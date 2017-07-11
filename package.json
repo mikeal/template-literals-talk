@@ -26,6 +26,6 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "bel": "^4.4.3"
+    "bel": "^5.0.2"
   }
 }
